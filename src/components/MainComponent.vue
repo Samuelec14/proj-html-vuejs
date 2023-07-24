@@ -17,10 +17,17 @@ export default {
     <main>
 
         <!-- "WELCOME TO OUR SITE" SECTION -->
-        <section id="sec">
-            <dic class="container">
-
-            </dic>
+        <section id="main-first-sec">
+            
+            <div class="d-flex flex-column align-items-end justify-content-center h-100">
+                <div class="middle-height-text position-relative">
+                    TEXT
+                </div>
+                <div id="up-square-chevron">
+                    FRECCETTA
+                </div>
+            </div>
+            
         </section>
 
         <div class="container">
@@ -56,8 +63,27 @@ export default {
 <style lang="scss" scoped>
 
 main{
-    padding: 40px;
-    text-align: center;
+    
+
+    #main-first-sec{
+        background-image: url(../assets/img/slider-1536x520.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:650px;
+        overflow: auto;
+        position: relative;
+    }
+
+    .middle-height-text{
+        position: relative;
+        right: 800px;
+    }
+    #up-square-chevron{
+        position: absolute;
+        bottom: 60px;
+        right: 50px;
+    }
+    
 }
 
 </style>
