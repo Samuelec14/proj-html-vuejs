@@ -17,7 +17,7 @@ export default {
     <main>
 
         <!-- "WELCOME TO OUR SITE" SECTION -->
-        <section id="main-first-sec">
+        <section id="main-sec1">
             
             <div class="d-flex flex-column align-items-end justify-content-center h-100">
                 <div class="middle-height-text position-relative">
@@ -30,21 +30,60 @@ export default {
             
         </section>
 
-        <div class="container">
+        <div class="my-container">
 
             <!-- NEW MOVIES SECTION  -->
-            <section id="sec"></section>
+            <section id="main-sec2">
+
+                <div class="section-title">
+                    <div class="row">
+                        <div class="col-10 title pb-3 ps-3">
+                            <h3>New Movie</h3>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, officiis!</div>
+                        </div>
+                        <div class="col-2">
+                            freccette
+                        </div>
+                    </div>
+                </div>
+                <div class="movies-carousel">
+                    <div class="row g-0">
+
+                        <div class="col">
+                            <div class="my-card">
+                                <img src="../assets/img/1-234x300.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="my-card active">
+                                <img src="../assets/img/2-1-216x300.jpg" alt="">
+                            </div>
+                            
+                        </div>
+
+                        <div class="col">
+                            <div class="my-card">
+                                <img src="../assets/img/5-238x300.jpg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
 
             <!-- MOVIE PLAYLIST SECTION  -->
-            <section id="sec"></section>
+            <section id="main-sec3">
+            </section>  
         </div>
 
         <!-- SECTION "COMING SOON MOVIE" -->
         <section>
-            <div class="container"></div>
+            <div class="my-container"></div>
         </section>
 
-        <div class="container">
+        <div class="my-container">
 
             <!-- NEW MOVIES SECTION  -->
             <section id="sec"></section>
@@ -63,25 +102,52 @@ export default {
 <style lang="scss" scoped>
 
 main{
-    
 
-    #main-first-sec{
+    #main-sec1{
         background-image: url(../assets/img/slider-1536x520.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height:650px;
         overflow: auto;
         position: relative;
-    }
 
-    .middle-height-text{
-        position: relative;
-        right: 800px;
+        .middle-height-text{
+            position: relative;
+            right: 800px;
+        }
+        #up-square-chevron{
+            position: absolute;
+            bottom: 60px;
+            right: 50px;
+        }
     }
-    #up-square-chevron{
-        position: absolute;
-        bottom: 60px;
-        right: 50px;
+    #main-sec2{
+        min-height: 800px;
+
+        .section-title{
+            padding: 60px 0;
+
+            .title{
+                border-left: 2px solid #13BE13;
+                border-bottom:1px solid #182028;
+            }
+        }
+        .movies-carousel{
+
+
+            .my-card{
+
+                // debug
+                background-color: pink;
+                border: 1px dashed black;
+                min-height: 500px;
+
+                img{
+                    border-radius: 30px;
+                }
+
+            }
+        }
     }
     
 }

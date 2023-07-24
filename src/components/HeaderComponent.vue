@@ -19,7 +19,7 @@ export default {
 
                 <!-- CONTACTS HEADER SECTION -->
             <section id="contacts-heading-sec">
-                <div class="container">
+                <div class="my-container">
                     <div class="row">
 
                         <!-- CONTACTS, LEFT SIDE  -->
@@ -38,7 +38,7 @@ export default {
 
             <!-- LOGO AND SEARCHBAR HEADER SECTION -->
             <section id="searchbar-sec">
-                <div class="container">
+                <div class="my-container">
                     <div class="row align-items-center">
                         
                         <!-- LOGO, LEFT SIDE  -->
@@ -57,7 +57,7 @@ export default {
 
             <!-- NAVBAR AND CART HEADER SECTION -->
             <section id="navbar-sec">
-                <div class="container">
+                <div class="my-container">
                     <div class="row">
 
                         <!-- NAVBAR, LEFT SIDE  -->
@@ -81,8 +81,6 @@ export default {
 <style lang="scss" scoped>
 
 header{
-    // debug
-    min-height: 200px;
 
 
     #contacts-heading-sec{
