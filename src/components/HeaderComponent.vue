@@ -22,10 +22,12 @@ export default {
                 <div class="container">
                     <div class="row">
 
+                        <!-- CONTACTS, LEFT SIDE  -->
                         <div class="col">
                             LINKS 
                         </div>
 
+                        <!-- LOGIN, RIGHT SIDE  -->
                         <div class="col text-end">
                             LOGIN
                         </div>
@@ -38,11 +40,13 @@ export default {
             <section id="searchbar-sec">
                 <div class="container">
                     <div class="row align-items-center">
-
+                        
+                        <!-- LOGO, LEFT SIDE  -->
                         <div class="col">
                             LOGO
                         </div>
 
+                        <!-- SEARCHBAR, RIGHT SIDE  -->
                         <div class="col text-end">
                             SEARCHBAR
                         </div>
@@ -56,10 +60,12 @@ export default {
                 <div class="container">
                     <div class="row">
 
+                        <!-- NAVBAR, LEFT SIDE  -->
                         <div class="col-8">
                             NAVBAR
                         </div>
 
+                        <!-- CHART, RIGHT SIDE  -->
                         <div class="col-4 text-end">
                             CHART
                         </div>
