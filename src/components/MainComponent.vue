@@ -52,6 +52,18 @@ export default {
                         <div class="col">
                             <div class="my-card">
                                 <img src="../assets/img/1-234x300.jpg" alt="">
+                                <div class="w-100 h-100">
+                                    <h4 class="title">title</h4>
+                                    <div class="vote">VOTO</div>
+                                    <div class="category">categoria</div>
+                                    <div class="details card-appendix">
+                                        details
+                                    </div>
+                                    <div class="views card-appendix">
+                                        2020
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
 
@@ -65,6 +77,7 @@ export default {
                         <div class="col">
                             <div class="my-card">
                                 <img src="../assets/img/5-238x300.jpg" alt="">
+                                
                             </div>
                         </div>
 
@@ -140,12 +153,41 @@ main{
                 // debug
                 background-color: pink;
                 border: 1px dashed black;
-                min-height: 500px;
-
+                position: relative;
+                
                 img{
                     border-radius: 30px;
+                    height: 400px;
+                }
+                >div{
+                    padding: 10px;
+                    
+                }
+                div{
+                    position: absolute;
+                    bottom: 0;
+                }
+                .vote{
+                    top: 7px;
+                    right: 12px;
+                }
+                .title{
+                    position: absolute;
+                    bottom: 60px;
+                }
+                .category{
+                    bottom: 50px;
+                }
+                .details{
+                    bottom: 25px;
+                    left: 0px;
+                }
+                .views{
+                    bottom: 25px;
+                    right: 0px;
                 }
 
+                
             }
         }
     }
