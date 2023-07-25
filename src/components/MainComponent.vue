@@ -38,7 +38,7 @@ export default {
                 <div class="section-title">
                     <div class="row">
                         <div class="col-10 title pb-3 ps-3">
-                            <h3>New Movie</h3>
+                            <h4>New Movie</h4>
                             <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, officiis!</div>
                         </div>
                         <div class="col-2">
@@ -83,11 +83,95 @@ export default {
 
                     </div>
                 </div>
+                
 
             </section>
 
             <!-- MOVIE PLAYLIST SECTION  -->
             <section id="main-sec3">
+
+                <div class="section-title mt-4">
+                    <div class="row">
+                        <div class="col title pb-3 ps-3">
+                            <h4>Movie Playlist</h4>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, officiis!</div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-8 debug h-100">
+                        <div class="box debug bg-black">
+                            
+                        </div>
+                    </div>
+                    <div class="col-4 debug h-100">
+                        <div class="movie-list debug h-100 overflow-auto">
+                            <div class="header p-3">
+                                <h6>New Movie</h6>
+                                <small>Plying 24</small>
+                            </div>
+                            <div class="list h-100">
+
+                                <div class="my-card p-3 d-flex w-100">
+                                    <div class="movie-icon me-2">
+                                        <img src="../assets/img/1-2-150x150.jpg" alt="">
+                                    </div>
+                                    <div class="">
+                                        <h5>Title</h5>
+                                        <div class="mb-2">323 views</div>
+                                        <div class="d-flex justify-content-between">
+                                            <span>date</span>
+                                            <span>duration</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-card p-3 d-flex w-100">
+                                    <div class="movie-icon me-2">
+                                        <img src="../assets/img/1-2-150x150.jpg" alt="">
+                                    </div>
+                                    <div class="">
+                                        <h5>Title</h5>
+                                        <div class="mb-2">323 views</div>
+                                        <div class="d-flex justify-content-between">
+                                            <span>date</span>
+                                            <span>duration</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-card p-3 d-flex w-100">
+                                    <div class="movie-icon me-2">
+                                        <img src="../assets/img/1-2-150x150.jpg" alt="">
+                                    </div>
+                                    <div class="">
+                                        <h5>Title</h5>
+                                        <div class="mb-2">323 views</div>
+                                        <div class="d-flex justify-content-between">
+                                            <span>date</span>
+                                            <span>duration</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-card p-3 d-flex w-100">
+                                    <div class="movie-icon me-2">
+                                        <img src="../assets/img/1-2-150x150.jpg" alt="">
+                                    </div>
+                                    <div class="">
+                                        <h5>Title</h5>
+                                        <div class="mb-2">323 views</div>
+                                        <div class="d-flex justify-content-between">
+                                            <span>date</span>
+                                            <span>duration</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
             </section>  
         </div>
 
@@ -116,6 +200,15 @@ export default {
 
 main{
 
+    .section-title{
+            padding: 60px 0;
+
+            .title{
+                border-left: 2px solid #13BE13;
+                border-bottom:1px solid #182028;
+            }
+        }
+
     #main-sec1{
         background-image: url(../assets/img/slider-1536x520.jpg);
         background-repeat: no-repeat;
@@ -135,18 +228,8 @@ main{
         }
     }
     #main-sec2{
-        min-height: 800px;
 
-        .section-title{
-            padding: 60px 0;
-
-            .title{
-                border-left: 2px solid #13BE13;
-                border-bottom:1px solid #182028;
-            }
-        }
         .movies-carousel{
-
 
             .my-card{
 
@@ -190,6 +273,33 @@ main{
                 
             }
         }
+    }
+    #main-sec3{
+        min-height: 1000px;
+
+        .debug{
+            min-height: 500px;
+            border: 1px solid black;
+        }
+        >.row{
+            height: 500px;
+        }
+        .movie-list{
+            background-color: #182028;
+
+            .header{
+                border-bottom: 1px solid rgb(6, 15, 25);
+                height: 85px;
+            }
+            .my-card{
+
+                .movie-icon{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+        
     }
     
 }
