@@ -1,6 +1,6 @@
 @use "partials/variables" as *;
 @use "partials/mixin" as *;
-// @use "partials/reset" as *;
+@use "partials/reset" as *;
 
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
@@ -22,4 +22,14 @@ main{
 img{
     width: 100%;
 }
-
+.text-green{
+    color: #13be13 ;
+}
+.debug{
+    background-color: pink;
+    border: 1px dashed black;
+}
+a{
+    color: unset;
+    text-decoration: unset;
+}

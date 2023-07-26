@@ -20,11 +20,16 @@ export default {
         <section id="main-sec1">
             
             <div class="d-flex flex-column align-items-end justify-content-center h-100">
-                <div class="middle-height-text position-relative">
-                    TEXT
+                <div class="middle-height-text position-relative text-center">
+                    <h5>Welcome to Our Movie Site</h5>
+                    <h2 class="text-uppercase fs-1">our special <span class="text-green">movies</span></h2>
+                    <div class="w-50 d-inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptas maiores non sequi in, ut saepe tenetur assumenda.</div>
+                    <div class="mt-3">
+                        <a href="#" class="my-btn">Read More</a>
+                    </div>
                 </div>
                 <div id="up-square-chevron">
-                    FRECCETTA
+                    <font-awesome-icon class="p-4" :icon="['fas', 'angle-up']" style="background-color: #182028;" />
                 </div>
             </div>
             
@@ -219,7 +224,29 @@ main{
 
         .middle-height-text{
             position: relative;
-            right: 800px;
+            right: 200px;
+
+            .my-btn {
+                background-color:#13be13;
+                border-radius:28px;
+                display:inline-block;
+                cursor:pointer;
+                color:#ffffff;
+                font-family:Arial;
+                font-size:17px;
+                font-weight:bold;
+                padding:13px 25px;
+                text-decoration:none;
+                text-shadow:0px 1px 0px #2f6627;
+            }
+            .my-btn:hover {
+                background-color:#5cbf2a;
+            }
+            .my-btn:active {
+                position:relative;
+                top:1px;
+            }
+
         }
         #up-square-chevron{
             position: absolute;
@@ -233,9 +260,6 @@ main{
 
             .my-card{
 
-                // debug
-                background-color: pink;
-                border: 1px dashed black;
                 position: relative;
                 
                 img{
