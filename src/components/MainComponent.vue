@@ -1,10 +1,13 @@
 <script>
-import SliderComponent from './sliderComponent.vue'
+import sliderComponent from './sliderComponent.vue'
+import PlaylistComponent from './PlaylistComponent.vue';
+
 
 export default {
     name: "MainComponent",
     components: {
-        SliderComponent
+        sliderComponent,
+        PlaylistComponent
     },
     data() {
         return{
@@ -13,7 +16,7 @@ export default {
                 title: 'Quisque Auctor Movie In Strack',
                 category: 'Coming soon',
                 genres: 'Horror, Drama',
-                rate: 4/10,
+                rate: '4/10',
                 release: 'Febrary 12, 2016',
                 views: 947 ,
                 poster_img:'../assets/img/2-1-216x300.jpg',
@@ -21,10 +24,10 @@ export default {
                 square_img:'../assets/img/2-300x300.jpg'
                 },
                 {
-                title: 'Hurry Animate Blue Strack New Movie',
+                title: 'Hurry Animate Blue Strack New',
                 category: 'Top Rating',
                 genres: 'Horror, Drama',
-                rate: 0/10,
+                rate: '0/10',
                 release: 'Febrary 12, 2016',
                 views: 381 ,
                 poster_img:'../assets/img/1-234x300.jpg',
@@ -35,7 +38,7 @@ export default {
                 title: 'New movie quisque in Strack',
                 category: 'Latest Movie',
                 genres: 'Horror, Drama',
-                rate: 0/10,
+                rate: '0/10',
                 release: 'Febrary 12, 2022',
                 views: 381 ,
                 poster_img:'../assets/img/5-238x300.jpg',
@@ -46,7 +49,7 @@ export default {
                 title: 'New movie action garila english',
                 category: 'Latest Movie',
                 genres: 'Horror, Drama, adventure',
-                rate: 3/10,
+                rate: '3/10',
                 release: 'june 12, 2022',
                 views: 381 ,
                 poster_img:'../assets/img/3-229x300.jpg',
@@ -57,7 +60,7 @@ export default {
                 title: 'New action english garila',
                 category: 'Latest Movie',
                 genres: 'Horror, Drama, adventure',
-                rate: 7/10,
+                rate: '7/10',
                 release: 'july 22, 2002',
                 views: 335 ,
                 poster_img:'../assets/img/3-1-238x300.jpg',
@@ -68,7 +71,7 @@ export default {
                 title: 'Animate Blue Strack Movie',
                 category: 'Latest Movie',
                 genres: 'Horror, adventure',
-                rate: 5/10,
+                rate: '5/10',
                 release: 'july 22, 2002',
                 views: 335 ,
                 poster_img:'../assets/img/5-229x300.jpg',
@@ -79,7 +82,7 @@ export default {
                 title: 'Animate Black New Movie',
                 category: 'Top rating',
                 genres: 'Horror, adventure',
-                rate: 9/10,
+                rate: '9/10',
                 release: 'july 22, 2012',
                 views: 678 ,
                 poster_img:'../assets/img/4-229x300.jpg',
@@ -90,7 +93,7 @@ export default {
                 title: 'Quisque Red New Movie',
                 category: 'Coming soon',
                 genres: 'Horror, adventure',
-                rate: 5/10,
+                rate: '5/10',
                 release: 'july 09, 2024',
                 views: 0 ,
                 poster_img:'../assets/img/3-222x300.jpg',
@@ -104,7 +107,7 @@ export default {
                 title: 'Actor the concept movie theory',
                 category: 'Latest Movie',
                 genres: 'Drama, adventure',
-                rate: 5/10,
+                rate: '5/10',
                 release: 'july 22, 2002',
                 views: 335 ,
                 poster_img:'',
@@ -115,7 +118,7 @@ export default {
                 title: 'Actor Nam Lectus Nibh theory',
                 category: 'Latest Movie',
                 genres: 'Drama, adventure',
-                rate: 5/10,
+                rate: '5/10',
                 release: 'july 22, 2002',
                 views: 335 ,
                 poster_img:'',
@@ -126,7 +129,7 @@ export default {
                 title: 'Nam Lectus Nibh Consequat',
                 category: 'Latest Movie',
                 genres: 'Drama, adventure',
-                rate: 5/10,
+                rate: '5/10',
                 release: 'july 22, 2002',
                 views: 335 ,
                 poster_img:'',
@@ -137,7 +140,7 @@ export default {
                 title: 'Bring me an Head',
                 category: 'Latest Movie',
                 genres: 'Horror, adventure',
-                rate: 5/10,
+                rate: '5/10',
                 release: 'july 22, 2002',
                 views: 335 ,
                 poster_img:'',
@@ -148,7 +151,7 @@ export default {
                 title: 'Pump Avtion Action Interaction',
                 category: 'Latest Movie',
                 genres: 'Horror, adventure',
-                rate: 5/10,
+                rate: '5/10',
                 release: 'july 22, 2002',
                 views: 335 ,
                 poster_img:'',
@@ -174,6 +177,7 @@ export default {
             <div class="d-flex flex-column align-items-end justify-content-center h-100">
                 <div class="middle-height-text position-relative text-center">
                     <h5>Welcome to Our Movie Site</h5>
+                    <!-- <h5 v-for="(movie, i) in movies" key:i>{{ movie.title }}</h5> -->
                     <h2 class="text-uppercase fs-1">our special <span class="text-green">movies</span></h2>
                     <div class="w-50 d-inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptas maiores non sequi in, ut saepe tenetur assumenda.</div>
                     <div class="mt-3">
@@ -189,8 +193,35 @@ export default {
 
         <div class="my-container">
 
-            <sliderComponent />
+            <!-- NEW MOVIES SECTION  -->
+            <section id="main-sec2">
 
+                <div class="section-title my-5">
+                    <div class="row">
+                        <div class="col-10 title pb-3 ps-3">
+                            <h4>New Movie</h4>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, officiis!</div>
+                        </div>
+                        <div class="col-2">
+                            freccette
+                        </div>
+                    </div>
+                </div>
+                <div class="movies-carousel">
+                    <div class="row g-0">
+
+                            <sliderComponent v-for="(movie, i) in movies" :key="i" 
+                            :movieCategory="movie.category"
+                            :movieTitle="movie.title"
+                            :moviePoster="movie.poster_img"
+                            :movieRate="movie.rate"
+                            :movieViews="movie.views"
+                            />
+
+
+                    </div>
+                </div>
+            </section>
             
             <!-- MOVIE PLAYLIST SECTION  -->
             <section id="main-sec3">
@@ -206,71 +237,46 @@ export default {
                 </div>
 
                 <div class="row">
-                    <div class="col-8 debug h-100">
-                        <div class="box debug bg-black">
-                            
+                    <div class="col-7 h-100">
+                        <div class="box bg-black h-100 w-100 position-relative">
+                            <div class="row">
+                                <div class="col-1">
+                                    <div>
+                                        <img class="mt-2 ms-2" src="../assets/img/channels4_profile.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="mt-2">
+                                        Title off current film trailer streaming
+                                    </div>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <img src="../assets/img/image (3).svg" alt="see-later-list">
+                                    <div class="dotted-text">Guarda più tardi</div>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <img src="../assets/img/image (4).svg" alt="share-button">
+                                    <div class="dotted-text">Condividi</div>
+                                </div>
+                            </div>
+                            <small class="p-2 bg-dark d-inline-block">Guarda su <img src="../assets/img/image (18).svg" alt="Youtube"></small>
                         </div>
                     </div>
-                    <div class="col-4 debug h-100">
-                        <div class="movie-list debug h-100 overflow-auto">
+                    <div class="col-5 h-100">
+                        <div class="movie-list h-100 overflow-auto">
                             <div class="header p-3">
                                 <h6>New Movie</h6>
                                 <small>Plying 24</small>
                             </div>
                             <div class="list h-100">
 
-                                <div class="my-card p-3 d-flex w-100">
-                                    <div class="movie-icon me-2">
-                                        <img src="../assets/img/1-2-150x150.jpg" alt="">
-                                    </div>
-                                    <div class="">
-                                        <h5>Title</h5>
-                                        <div class="mb-2">323 views</div>
-                                        <div class="d-flex justify-content-between">
-                                            <span>date</span>
-                                            <span>duration</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="my-card p-3 d-flex w-100">
-                                    <div class="movie-icon me-2">
-                                        <img src="../assets/img/1-2-150x150.jpg" alt="">
-                                    </div>
-                                    <div class="">
-                                        <h5>Title</h5>
-                                        <div class="mb-2">323 views</div>
-                                        <div class="d-flex justify-content-between">
-                                            <span>date</span>
-                                            <span>duration</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="my-card p-3 d-flex w-100">
-                                    <div class="movie-icon me-2">
-                                        <img src="../assets/img/1-2-150x150.jpg" alt="">
-                                    </div>
-                                    <div class="">
-                                        <h5>Title</h5>
-                                        <div class="mb-2">323 views</div>
-                                        <div class="d-flex justify-content-between">
-                                            <span>date</span>
-                                            <span>duration</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="my-card p-3 d-flex w-100">
-                                    <div class="movie-icon me-2">
-                                        <img src="../assets/img/1-2-150x150.jpg" alt="">
-                                    </div>
-                                    <div class="">
-                                        <h5>Title</h5>
-                                        <div class="mb-2">323 views</div>
-                                        <div class="d-flex justify-content-between">
-                                            <span>date</span>
-                                            <span>duration</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <PlaylistComponent v-for="(movie, i) in movies" :key="i" 
+                            :movieTitle="movie.title"
+                            :movieRelease="movie.release"
+                            :movieIcon="movie.icon_square_img"
+                            :movieViews="movie.views"
+                            />
+
                             </div>
                             
                         </div>
@@ -340,11 +346,13 @@ main{
                 text-shadow:0px 1px 0px #2f6627;
             }
             .my-btn:hover {
-                background-color:#5cbf2a;
+                background-color:white;
+                color: black;
+                text-shadow:unset;
             }
             .my-btn:active {
                 position:relative;
-                top:1px;
+                top: 1px;
             }
 
         }
@@ -354,6 +362,20 @@ main{
             right: 50px;
         }
     }
+
+    #main-sec2{
+
+        .section-title{
+
+            .title{
+                border-left: 2px solid #13BE13;
+                border-bottom:1px solid #182028;
+            }
+        }
+        // .movies-carousel{
+
+        // }
+    }
     
     #main-sec3{
         min-height: 1000px;
@@ -362,23 +384,38 @@ main{
             min-height: 500px;
             border: 1px solid black;
         }
+        
         >.row{
             height: 500px;
-        }
-        .movie-list{
-            background-color: #182028;
 
+
+            .box{
+
+                small{
+                    position: absolute;
+                    bottom: 10px;
+                }
+
+                >.row{
+
+                    .col-1{
+                        
+                        img{
+                            border-radius: 50%;
+                            width: 110%;
+                        }
+                    }
+                }
+            }
             .header{
                 border-bottom: 1px solid rgb(6, 15, 25);
                 height: 85px;
             }
-            .my-card{
+        }
+        .movie-list{
+            background-color: #182028;
 
-                .movie-icon{
-                    width: 100px;
-                    height: 100px;
-                }
-            }
+
         }
         
     }

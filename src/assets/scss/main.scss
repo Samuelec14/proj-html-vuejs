@@ -33,4 +33,8 @@ a{
     color: unset;
     text-decoration: unset;
 }
-
+.dotted-text{
+    text-overflow:ellipsis; 
+    white-space: nowrap; 
+    overflow: hidden;
+}
