@@ -287,8 +287,19 @@ export default {
         </div>
 
         <!-- SECTION "COMING SOON MOVIE" -->
-        <section>
-            <div class="my-container"></div>
+        <section id="main-sec4">
+            <div class="d-flex align-items-center justify-content-end h-100">
+                <div class="middle-height-text position-relative text-center">
+                    <h5 class="text-uppercase text-green fw-bold">coming soon movie</h5>
+                    <!-- <h5 v-for="(movie, i) in movies" key:i>{{ movie.title }}</h5> -->
+                    <h2 class="text-uppercase fs-1">max still</h2>
+                    <div class="py-2 px-3 bg-dark">
+                        <div class=" d-inline-block text-uppercase fs-4"> jon player <span class="text-green">&</span> emily rose</div>
+                        <div class="text-uppercase">the countdown is finished</div>
+                    </div>
+                </div>
+                
+            </div>
         </section>
 
         <div class="my-container">
@@ -378,7 +389,7 @@ main{
     }
     
     #main-sec3{
-        min-height: 1000px;
+        margin-bottom: 100px;
 
         .debug{
             min-height: 500px;
@@ -418,6 +429,19 @@ main{
 
         }
         
+    }
+    #main-sec4{
+        background-image: url(../assets/img/coming-bg.jpg);
+        background-repeat:repeat;
+        background-size: cover;
+        height:650px;
+        overflow: auto;
+        position: relative;
+
+        .middle-height-text{
+            position: relative;
+            right: 350px;
+        }
     }
     
 }
