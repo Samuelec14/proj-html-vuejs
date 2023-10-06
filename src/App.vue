@@ -28,7 +28,7 @@ export default {
 
 <MainComponent />
 
-<FooterComponent />
+
 
 </template>
 

@@ -31,7 +31,7 @@ export default {
                 release: 'Febrary 12, 2016',
                 views: 381 ,
                 poster_img:'../assets/img/1-234x300.jpg',
-                icon_square_img:'',
+                icon_square_img:'../assets/img/3-150x150.jpg',
                 square_img:''
                 },
                 {
@@ -86,7 +86,7 @@ export default {
                 release: 'july 22, 2012',
                 views: 678 ,
                 poster_img:'../assets/img/4-229x300.jpg',
-                icon_square_img:'',
+                icon_square_img:'../assets/img/3-150x150.jpg',
                 square_img:'.jpg'
                 },
                 {
@@ -97,7 +97,7 @@ export default {
                 release: 'july 09, 2024',
                 views: 0 ,
                 poster_img:'../assets/img/3-222x300.jpg',
-                icon_square_img:'',
+                icon_square_img:'../assets/img/5-150x150 (1).jpg',
                 square_img:''
                 },
             ],
@@ -162,7 +162,10 @@ export default {
         }
     },
     methods: {
-
+        getImgPath: function(src) {
+            console.log(new URL(`${src}`, import.meta.url).href);
+            return new URL(`${src}`, import.meta.url).href
+        }
     }
 }
 </script>
@@ -185,7 +188,9 @@ export default {
                     </div>
                 </div>
                 <div id="up-square-chevron">
-                    <font-awesome-icon class="p-4" :icon="['fas', 'angle-up']" style="background-color: #182028;" />
+                    <a href="">
+                        <font-awesome-icon class="p-4" :icon="['fas', 'angle-up']" style="background-color: #182028;" />
+                    </a>
                 </div>
             </div>
             
@@ -203,7 +208,8 @@ export default {
                             <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, officiis!</div>
                         </div>
                         <div class="col-2">
-                            freccette
+                            <a href="" class="fs-3 me-1">&#9665</a>
+                            <a href="" class="fs-3 ms-1">&#9655</a>
                         </div>
                     </div>
                 </div>
@@ -240,33 +246,35 @@ export default {
                     <div class="col-7 h-100">
                         <div class="box bg-black h-100 w-100 position-relative">
                             <div class="row">
-                                <div class="col-1">
+                                <div class="col-1 ">
                                     <div>
-                                        <img class="mt-2 ms-2" src="../assets/img/channels4_profile.jpg" alt="">
+                                        <img class="mt-3 ms-2" src="../assets/img/channels4_profile.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="col-7">
-                                    <div class="mt-2">
+                                <div class="col-7 mt-2">
+                                    <div class="mt-2 fs-5">
                                         Title off current film trailer streaming
                                     </div>
                                 </div>
                                 <div class="col-2 text-center">
-                                    <img src="../assets/img/image (3).svg" alt="see-later-list">
+                                    <img id="wl-btn" src="../assets/img/watch-later.png" class="my-1" alt="see-later-list">
                                     <div class="dotted-text">Guarda più tardi</div>
                                 </div>
                                 <div class="col-2 text-center">
-                                    <img src="../assets/img/image (4).svg" alt="share-button">
-                                    <div class="dotted-text">Condividi</div>
+                                    <img id="share-btn" src="../assets/img/Share-button-png-by-mtc-tutorials.png" class="my-1 mt-3" alt="share-button">
+                                    <div class="dotted-text mt-1">Condividi</div>
                                 </div>
                             </div>
-                            <small class="p-2 bg-dark d-inline-block">Guarda su <img src="../assets/img/image (18).svg" alt="Youtube"></small>
+                            <small class="p-2 bg-dark d-inline-block">Guarda su 
+                                <img id="yt-logo" :src="getImgPath('../assets/img/3146788_youtube_logo_icon.png')" alt="Youtube">
+                            </small>
                         </div>
                     </div>
                     <div class="col-5 h-100">
                         <div class="movie-list h-100 overflow-auto">
                             <div class="header p-3">
-                                <h6>New Movie</h6>
-                                <small>Plying 24</small>
+                                <h6><strong>New Movies</strong></h6>
+                                <small>Playing 24</small>
                             </div>
                             <div class="list h-100">
 
@@ -394,6 +402,19 @@ main{
         .debug{
             min-height: 500px;
             border: 1px solid black;
+        }
+
+        #yt-logo{
+            width: 5%;
+            margin-left: 10px;
+        }
+        #share-btn{
+            width: 40%;
+            
+        }
+        #wl-btn{
+            width: 40%;
+            margin-top: 13px!important;
         }
         
         >.row{

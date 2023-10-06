@@ -9,7 +9,11 @@ export default {
     }
     },
     methods: {
-        
+        getImgPath: function(src) {
+            console.log(new URL(`${src}`, import.meta.url).href);
+            return new URL(`${src}`, import.meta.url).href
+        }
+
     },
     props:{
         movieTitle: String,
@@ -28,7 +32,7 @@ export default {
 
     <div class="my-card p-3 d-flex w-100">
         <div class="movie-icon me-2">
-            <img src="../assets/img/1-2-150x150.jpg" alt="">
+            <img :src="getImgPath(movieIcon)" alt="">
         </div>
         <div class="">
             <h6>{{ movieTitle }}</h6>

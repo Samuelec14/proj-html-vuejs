@@ -109,9 +109,9 @@ export default {
                                         Home
                                     </button>
                                     <ul class="dropdown-menu dropdown-edit">
-                                        <li class="mt-4"><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li class="mt-4"><a class="dropdown-item dropdown-item-edit" href="#">Action</a></li>
+                                        <li><a class="dropdown-item dropdown-item-edit" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item dropdown-item-edit" href="#">Something else here</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -119,9 +119,9 @@ export default {
                                         Celebrity
                                     </button>
                                     <ul class="dropdown-menu dropdown-edit">
-                                        <li class="mt-4"><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li class="mt-4"><a class="dropdown-item dropdown-item-edit" href="#">Action</a></li>
+                                        <li><a class="dropdown-item dropdown-item-edit" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item dropdown-item-edit" href="#">Something else here</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -129,9 +129,9 @@ export default {
                                         Movie
                                     </button>
                                     <ul class="dropdown-menu dropdown-edit">
-                                        <li class="mt-4"><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li class="mt-4"><a class="dropdown-item dropdown-item-edit" href="#">Action</a></li>
+                                        <li><a class="dropdown-item dropdown-item-edit" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item dropdown-item-edit" href="#">Something else here</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -139,9 +139,9 @@ export default {
                                         Page
                                     </button>
                                     <ul class="dropdown-menu dropdown-edit">
-                                        <li class="mt-4"><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li class="mt-4"><a class="dropdown-item dropdown-item-edit" href="#">Action</a></li>
+                                        <li><a class="dropdown-item dropdown-item-edit" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item dropdown-item-edit" href="#">Something else here</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -149,9 +149,9 @@ export default {
                                         Shop
                                     </button>
                                     <ul class="dropdown-menu dropdown-edit">
-                                        <li class="mt-4"><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li class="mt-4"><a class="dropdown-item dropdown-item-edit" href="#">Action</a></li>
+                                        <li><a class="dropdown-item dropdown-item-edit" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item dropdown-item-edit" href="#">Something else here</a></li>
                                     </ul>
                                 </li>
                                 <li class="me-2">
@@ -246,6 +246,11 @@ header{
                 border-radius: 0;
                 background-color: #060F19;
                 
+                .dropdown-item-edit:hover{
+                    color: #060F19;
+                }
+
+
                 li{
                     a{
                         color: white;

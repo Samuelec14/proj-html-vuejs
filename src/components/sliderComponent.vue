@@ -9,7 +9,11 @@ export default {
     }
     },
     methods: {
-        
+
+        getImgPath: function(src) {
+            console.log(new URL(`${src}`, import.meta.url).href);
+            return new URL(`${src}`, import.meta.url).href
+        }
     },
     props:{
         movieTitle: String,
@@ -21,23 +25,28 @@ export default {
     },
     computed:{
 
-    }
+    },
+    created(){
+        
+    },
 }
+
 </script>
 
 <template>
 
         <div class="col-4">
-            <div class="my-card">
-                <img :src="moviePoster"  alt="">
+            <div class="my-card m-3">
+                <img :src="getImgPath(moviePoster)"  alt="Immagine mancante">
                 <div class="w-100 h-100">
-                    <h4 class="title">{{movieTitle}}</h4>
+                    <h4 class="title mb-4">{{ movieTitle }}</h4>
                     <div class="vote">{{ movieRate }}</div>
-                    <div class="category">{{ movieCategory }}</div>
-                    <div class="details card-appendix">
-                        details
+                    <div class="category mb-2">{{ movieCategory }}</div>
+                    <div class="details card-appendix p-1 px-2">
+                        <a href="#">Details
+                        </a>    
                     </div>
-                    <div class="views card-appendix">
+                    <div class="views card-appendix p-1 px-2">
                         {{ movieViews }}
                     </div>
     
@@ -71,6 +80,7 @@ position: relative;
         .vote{
             top: 7px;
             right: 12px;
+            
         }
         .title{
             position: absolute;
@@ -78,14 +88,21 @@ position: relative;
         }
         .category{
             bottom: 50px;
+            
         }
         .details{
             bottom: 25px;
             left: 0px;
+            background-color: rgb(6, 15, 25);
+            border-radius: 0 10px 10px 0;
         }
         .views{
             bottom: 25px;
             right: 0px;
+            background-color: rgb(6, 15, 25);
+            border-radius: 10px 0 0 10px;
+
+
         }
 }
 
